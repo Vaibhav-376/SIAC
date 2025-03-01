@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact Us</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename" style="color: #F07C00;">SIAC</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">About Us</a>
+            <ul class="submenu">
+              <li><a href="charimanMessage.html">Chairman's Message</a></li>
+              <li><a href="coreTeam.html">Core Team</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Services</a>
+            <ul class="submenu">
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="ourExpertise.html">Skill Development</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Our Approval</a>
+            <ul class="submenu">
+              <li><a href="industryTieUps.html">Industry Tie Ups</a></li>
+              <li><a href="govtTieups.html">Government Tie Ups</a></li>
+              <li><a href="placementTieUps.html">Placement Tie Ups</a></li>
+              <li><a href="ourApproval.html">Approvals</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <style>
+    .navmenu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    .navmenu ul li {
+      position: relative;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #F07C00;
+      padding: 0px 10px;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ccc;
+      min-width: 150px;
+    }
+
+    .submenu li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submenu li:hover {
+      background: #F07C00;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .navmenu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 10px;
+      }
+
+      .navmenu ul.show {
+        display: flex;
+      }
+
+      .mobile-nav-toggle {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .dropdown .submenu {
+        position: relative;
+        display: none;
+        width: 100%;
+      }
+
+      .dropdown.active .submenu {
+        display: block;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileToggle = document.querySelector(".mobile-nav-toggle");
+      const navMenu = document.querySelector(".navmenu ul");
+      const dropdowns = document.querySelectorAll(".dropdown > .dropdown-toggle");
+
+      mobileToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+      });
+
+      dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("click", function (event) {
+          event.preventDefault();
+          const parentLi = this.parentElement;
+          parentLi.classList.toggle("active");
+
+          document.querySelectorAll(".dropdown").forEach((otherDropdown) => {
+            if (otherDropdown !== parentLi) {
+              otherDropdown.classList.remove("active");
+            }
+          });
+        });
+      });
+
+      document.getElementById("mobile-menu-toggle").addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".navmenu")) {
+          navMenu.classList.remove("show");
+          document.querySelectorAll(".dropdown").forEach((dropdown) => {
+            dropdown.classList.remove("active");
+          });
+        }
+      });
+    });
+  </script>
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <section id="hero" class="hero section dark-background position-relative overflow-hidden">
+
+      <!-- Background Image -->
+      <img src="/assets/images/contactUs.jpg" class="position-absolute top-0 start-0 w-100 h-100 img-fluid"
+        alt="Background Image" data-aos="fade-in"
+        style="object-fit: cover; height: 50vh; max-height: 400px; min-height: 250px;">
+    
+      <!-- Content -->
+      <div class="container position-relative text-center text-white d-flex flex-column justify-content-center align-items-center h-100">
+        <h2 data-aos="fade-up" data-aos-delay="100">
+          Contact Us.
+        </h2>
+      </div>
+    
+    </section>
+    
+    <style>
+      /* Hero Section Styling */
+      #hero {
+        height: 50vh; /* Adjusted height */
+        max-height: 400px;
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+      }
+    
+      /* Ensure the background image covers the entire section */
+      #hero img {
+        height: 100%;
+        object-fit: cover;
+      }
+    
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        #hero {
+          height: 40vh;
+          max-height: 300px;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        #hero {
+          height: 35vh;
+          max-height: 250px;
+        }
+      }
+    </style>
+    
+    <!-- <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Contact</li>
+          </ol>
+        </div>
+      </nav> -->
+    </div><!-- End Page Title -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 300px;"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.080490692791!2d77.26446857533185!3d28.537300275716934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3273585d443%3A0xc7a7216cc048015!2sIGCSM!5e0!3m2!1sen!2sin!4v1740804463253!5m2!1sen!2sin"
+          frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <!-- <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i> -->
+            <!-- <div>
+                <h3>Address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div> -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0" style="background-color: #F07C00;"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+91 9911065358</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0" style="background-color: #F07C00;"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>skillscentres@igcsm.in</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit" style="background-color: #F07C00;">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <div class="marquee-wrapper">
+    <div class="marquee-content">
+      <img src="/assets/GovtImages/75th.png" alt="">
+      <img src="https://igcsm.online/_next/image?url=%2Fimage%2Fnsdc.png&w=640&q=75" alt="">
+      <img src="https://igcsm.online/_next/image?url=%2Fimage%2Fnafed.jpg&w=640&q=75" alt="">
+      <img src="/assets/GovtImages/SwachBharat.jpg" alt="">
+      <img src="/assets/GovtImages/digitalIndia.jpg" alt="">
+      <img src="/assets/GovtImages/skillIndia.png" alt="">
+      <!-- Duplicate images for seamless loop -->
+      <img src="/assets/GovtImages/75th.png" alt="">
+      <img src="https://igcsm.online/_next/image?url=%2Fimage%2Fnsdc.png&w=640&q=75" alt="">
+      <img src="https://igcsm.online/_next/image?url=%2Fimage%2Fnafed.jpg&w=640&q=75" alt="">
+      <img src="/assets/GovtImages/SwachBharat.jpg" alt="">
+      <img src="/assets/GovtImages/digitalIndia.jpg" alt="">
+      <img src="/assets/GovtImages/skillIndia.png" alt="">
+    </div>
+  </div>
+  
+  <style>
+    .marquee-wrapper {
+      width: 80%; /* Set marquee width (Adjust as needed) */
+      max-width: 1000px; /* Optional: Limit max width */
+      margin: auto; /* Centers it horizontally */
+      overflow: hidden;
+      position: relative;
+      background: white;
+      padding: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .marquee-content {
+      display: flex;
+      gap: 15px; /* Adjust spacing between images */
+      width: max-content;
+      animation: scrollMarquee 80s linear infinite; /* Slower speed */
+    }
+  
+    .marquee-content img {
+      max-height: 100px; /* Adjust as per actual size */
+      width: auto; /* Maintains aspect ratio */
+      object-fit: contain;
+      border-radius: 10px;
+    }
+  
+    /* Stop scrolling on hover */
+    .marquee-wrapper:hover .marquee-content {
+      animation-play-state: paused;
+    }
+  
+    @keyframes scrollMarquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+  
+
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename" style="color: #F07C00;">SIAC</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <!-- <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p> -->
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9911065358</span></p>
+            <p><strong>Email:</strong> <span>skillscentres@igcsm.in</span></p>
+          </div>
+          <!-- <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div> -->
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 style="color: #F07C00;">Useful Links</h4>
+          <ul>
+            <li><a href="index.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Home</a></li>
+            <li><a href="about.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">About us</a></li>
+            <li><a href="ourExpertise.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Our Expertise</a></li>
+            <li><a href="contact.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Contact Us</a></li>
+            <li><a href="#" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#F07C00'"
+                onmouseout="this.style.color='inherit'">Work With Us</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div> -->
+
+        <div class="mb-5" data-aos="fade-up" style="width: max-content; flex: auto ;" data-aos-delay="200">
+          <iframe style="border:0; width: 100%; height: 300px;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.080490692791!2d77.26446857533185!3d28.537300275716934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3273585d443%3A0xc7a7216cc048015!2sIGCSM!5e0!3m2!1sen!2sin!4v1740804463253!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" "
+            frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div> -->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SIAC</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
+      </div> -->
+      </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

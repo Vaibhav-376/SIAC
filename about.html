@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>About Us</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="about-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename" style="color: #F07C00;">SIAC</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">About Us</a>
+            <ul class="submenu">
+              <li><a href="charimanMessage.html">Chairman's Message</a></li>
+              <li><a href="coreTeam.html">Core Team</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Services</a>
+            <ul class="submenu">
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="ourExpertise.html">Skill Development</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Our Approval</a>
+            <ul class="submenu">
+              <li><a href="industryTieUps.html">Industry Tie Ups</a></li>
+              <li><a href="govtTieups.html">Government Tie Ups</a></li>
+              <li><a href="placementTieUps.html">Placement Tie Ups</a></li>
+              <li><a href="ourApproval.html">Approvals</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <style>
+    .navmenu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+    }
+
+    .navmenu ul li {
+      position: relative;
+    }
+
+    .navmenu ul li a {
+      text-decoration: none;
+      color: #F07C00;
+      padding: 0px 10px;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      border: 1px solid #ccc;
+      min-width: 150px;
+    }
+
+    .submenu li {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .submenu li:hover {
+      background: #F07C00;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .navmenu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 10px;
+      }
+
+      .navmenu ul.show {
+        display: flex;
+      }
+
+      .mobile-nav-toggle {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .dropdown .submenu {
+        position: relative;
+        display: none;
+        width: 100%;
+      }
+
+      .dropdown.active .submenu {
+        display: block;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const mobileToggle = document.querySelector(".mobile-nav-toggle");
+      const navMenu = document.querySelector(".navmenu ul");
+      const dropdowns = document.querySelectorAll(".dropdown > .dropdown-toggle");
+
+      mobileToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("show");
+      });
+
+      dropdowns.forEach((dropdown) => {
+        dropdown.addEventListener("click", function (event) {
+          event.preventDefault();
+          const parentLi = this.parentElement;
+          parentLi.classList.toggle("active");
+
+          document.querySelectorAll(".dropdown").forEach((otherDropdown) => {
+            if (otherDropdown !== parentLi) {
+              otherDropdown.classList.remove("active");
+            }
+          });
+        });
+      });
+
+      document.getElementById("mobile-menu-toggle").addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!event.target.closest(".navmenu")) {
+          navMenu.classList.remove("show");
+          document.querySelectorAll(".dropdown").forEach((dropdown) => {
+            dropdown.classList.remove("active");
+          });
+        }
+      });
+    });
+  </script>
+
+
+
+  <main class="main">
+
+    <section id="hero" class="hero section dark-background position-relative overflow-hidden">
+
+      <img src="/assets/images/aboutsus.webp" class="position-absolute top-0 start-0 w-100 h-100 img-fluid"
+        alt="Background Image" data-aos="fade-in" style="object-fit: cover;">
+
+      <div class="container position-relative text-center text-white">
+        <h2 data-aos="fade-up" data-aos-delay="100">
+          "Skill is the unified force of experience, intellect, and passion in their operation.” – John Ruskin.
+        </h2>
+        <!-- <p data-aos="fade-up" data-aos-delay="200">We are a team of talented designers making websites with Bootstrap.</p> -->
+        <!-- <div class="d-flex mt-4 justify-content-center" data-aos="fade-up" data-aos-delay="300"> -->
+          <!-- <a href="index.html" class="btn-get-started">Get Started</a> -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Page Title -->
+    <!-- <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>About Us<br></h1>
+              <p class="mb-0">"Skill is the unified force of experience, intellect and passion in their operation.” John Ruskin.</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    <!-- <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">About Us<br></li>
+          </ol>
+        </div>
+      </nav> -->
+    </div><!-- End Page Title -->
+
+    <!-- About Us Section -->
+    <section id="about-us" class="section about-us">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/about-2.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="200">
+            <h3>SIAC History</h3>
+            <p class="fst-italic">
+              SIAC was established as a Trust under the Indian Trust Act, 1882, on 15th September 2008, with its
+              headquarters in Delhi. That same year, it launched five IT education centers aimed at providing
+              opportunities for economically disadvantaged youth in Delhi and Uttar Pradesh. Through generous
+              contributions from trustees and well-wishers, SIAC successfully trained approximately 200 beneficiaries
+              within the first six months of operation.
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle" style="color: #F07C00;"></i> <span> SIAC provides meaningful work and
+                  training opportunities to
+                  economically disadvantaged youth, helping them gain valuable skills for future success.</span></li>
+              <li><i class="bi bi-check-circle" style="color: #F07C00;"></i> <span>SIAC faces challenges in providing
+                  resources and support, but
+                  these challenges are met with the goal of creating better opportunities and satisfaction for the youth
+                  they serve.</span></li>
+              <li><i class="bi bi-check-circle" style="color: #F07C00;"> </i> <span> Despite obstacles, SIAC remains
+                  dedicated to its mission,
+                  ensuring that the youth benefit from the training programs and ultimately overcome socio-economic
+                  barriers.</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Us Section -->
+
+    <!-- Counts Section -->
+    <section id="counts" class="section counts light-background" style="width: 100%; padding: 0; margin: 0;">
+      <div class="container-fluid" style="max-width: 100%; padding-left: 0; padding-right: 0; margin: 0 auto;"
+        data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 justify-content-center text-center"
+          style="display: flex; justify-content: center; align-items: center; margin: 0;">
+
+          <div class="col-lg-3 col-md-6" style="display: flex; justify-content: center; align-items: center;">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="50000" data-purecounter-duration="1"
+                class="purecounter" style="font-size: 2rem; font-weight: bold; color: #F07C00;"></span>
+              <p style="margin: 0; font-size: 1rem; color: #666;">Students</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6" style="display: flex; justify-content: center; align-items: center;">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
+                class="purecounter" style="font-size: 2rem; font-weight: bold; color: #F07C00;"></span>
+              <p style="margin: 0; font-size: 1rem; color: #666;">Courses</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6" style="display: flex; justify-content: center; align-items: center;">
+            <div class="stats-item text-center w-100 h-100">
+              <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1"
+                class="purecounter" style="font-size: 2rem; font-weight: bold; color: #F07C00;"></span>
+              <p style="margin: 0; font-size: 1rem; color: #666;">Trainers</p>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+      </div>
+    </section><!-- /Counts Section -->
+
+
+    <section id="trainers-index" class="section trainers-index">
+      <div class="container">
+        <!-- Add the "Our Courses" Heading -->
+        <h2 class="mb-4 fw-bold" style="color: #333; margin-left: 20px;">Our <span class=""
+            style="color: #F07C00;">Team</span></h2>
+
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex " data-aos="fade-up" data-aos-delay="100">
+            <div class="member p-3">
+              <img src="assets/images/sanjeev.webp" class="img-fluid border  rounded" alt="Kapil Dev">
+              <div class="member-content">
+                <h4>Mr. Sanjeev Prajapati</h4>
+                <span>Director (Projects)</span>
+                <!-- <p>Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut</p> -->
+                <!-- <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="member p-3">
+              <img src="assets/images/avinash-yadav.webp" class="img-fluid border rounded" alt="Avinash Yadav">
+              <div class="member-content">
+                <h4>Mr. Avinash Yadav</h4>
+                <span>Project Manager</span>
+                <!-- <p>Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus</p> -->
+                <!-- <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member p-3">
+              <img src="assets/images/nisha.webp" class="img-fluid border rounded" alt="Nisha Tanwar">
+              <div class="member-content">
+                <h4>Ms. Nisha Tanwar</h4>
+                <span>Director (HR & Administration)</span>
+                <!-- <p>“Excellence is not a skill, it's an attitude” – Ralph Marston</p> -->
+                <!-- <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Trainers Index Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>What are they saying</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/images/SAHIL.jpg" class="testimonial-img" alt="">
+                  <h3>Sahil</h3>
+                  <h4>Student</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left" style="color: #F07C00;"></i>
+                    <span>“" आईजीसीएसएम में मेरा अनुभव बहुत अच्छा रहा है। डीडीयू-जीकेवाई के तहत मुझे जो प्रशिक्षण मिला,
+                      उससे मुझे अच्छी नौकरी पाने में मदद मिली और अब मैं अच्छी कमाई कर रहा हूं।"</span>
+                    <i class="bi bi-quote quote-icon-right" style="color: #F07C00;"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/images/photo parsun.jpg" class="testimonial-img" alt="">
+                  <h3>Parsun </h3>
+                  <h4>Student</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left" style="color: #F07C00;"></i>
+                    <span>“
+                      मैं एक गरीब परिवार से हूं जो गुजारा करने के लिए संघर्ष कर रहा है। आईजीसीएसएम में कौशल विकास
+                      पाठ्यक्रम में शामिल होने से मेरा जीवन बदल गया है। मैंने कभी कंप्यूटर लैब नहीं देखी थी और न ही
+                      उसमें काम किया था और इतने जीवंत वातावरण का अनुभव किया था। मैं भी अब काम शुरू कर रहा हूं.' मेरा
+                      जीवन बदलने के लिए आईजीसीएसएम टीम को धन्यवाद।</span>
+                    <i class="bi bi-quote quote-icon-right" style="color: #F07C00;"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/images/Stuti_image.jpg" class="testimonial-img" alt="">
+                  <h3>Stuti</h3>
+                  <h4> Student</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left" style="color: #F07C00;"></i>
+                    <span>“
+                      igcsm में जुड़ना मेरे जीवन का सबसे अच्छा निर्णय था। यहाँ की शिक्षा और ट्रेनिंग से मुझे अपने करियर
+                      में आगे बढ़ने का आत्मविश्वास मिला है।</span>
+                    <i class="bi bi-quote quote-icon-right" style="color: #F07C00;"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <!-- <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>End testimonial item -->
+
+            <!-- <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  </main>
+  <div class="marquee-wrapper">
+    <div class="marquee-content">
+      <img src="/assets/GovtImages/75th.png" alt="">
+      <img src="https://igcsm.online/_next/image?url=%2Fimage%2Fnsdc.png&w=640&q=75" alt="">
+      <img src="https://igcsm.online/_next/image?url=%2Fimage%2Fnafed.jpg&w=640&q=75" alt="">
+      <img src="/assets/GovtImages/SwachBharat.jpg" alt="">
+      <img src="/assets/GovtImages/digitalIndia.jpg" alt="">
+      <img src="/assets/GovtImages/skillIndia.png" alt="">
+      <!-- Duplicate images for seamless loop -->
+      <img src="/assets/GovtImages/75th.png" alt="">
+      <img src="https://igcsm.online/_next/image?url=%2Fimage%2Fnsdc.png&w=640&q=75" alt="">
+      <img src="https://igcsm.online/_next/image?url=%2Fimage%2Fnafed.jpg&w=640&q=75" alt="">
+      <img src="/assets/GovtImages/SwachBharat.jpg" alt="">
+      <img src="/assets/GovtImages/digitalIndia.jpg" alt="">
+      <img src="/assets/GovtImages/skillIndia.png" alt="">
+    </div>
+  </div>
+  
+  <style>
+    .marquee-wrapper {
+      width: 80%; /* Set marquee width (Adjust as needed) */
+      max-width: 1000px; /* Optional: Limit max width */
+      margin: auto; /* Centers it horizontally */
+      overflow: hidden;
+      position: relative;
+      background: white;
+      padding: 10px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .marquee-content {
+      display: flex;
+      gap: 15px; /* Adjust spacing between images */
+      width: max-content;
+      animation: scrollMarquee 80s linear infinite; /* Slower speed */
+    }
+  
+    .marquee-content img {
+      max-height: 100px; /* Adjust as per actual size */
+      width: auto; /* Maintains aspect ratio */
+      object-fit: contain;
+      border-radius: 10px;
+    }
+  
+    /* Stop scrolling on hover */
+    .marquee-wrapper:hover .marquee-content {
+      animation-play-state: paused;
+    }
+  
+    @keyframes scrollMarquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+  
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename" style="color: #F07C00;">SIAC</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <!-- <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p> -->
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9911065358</span></p>
+            <p><strong>Email:</strong> <span>skillscentres@igcsm.in</span></p>
+          </div>
+          <!-- <div class="social-links d-flex mt-4">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div> -->
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 style="color: #F07C00;">Useful Links</h4>
+          <ul>
+            <li><a href="index.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Home</a></li>
+            <li><a href="about.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">About us</a></li>
+            <li><a href="ourExpertise.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Our Expertise</a></li>
+            <li><a href="contact.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Contact Us</a></li>
+            <li><a href="ourApproval.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Our Approval</a></li>
+                <li><a href="#" style="text-decoration: none; color: inherit;"
+                  onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Work With Us</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Product Management</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Graphic Design</a></li>
+        </ul>
+      </div> -->
+
+      <div class="mb-5" data-aos="fade-up" style="width: max-content; flex: auto ;" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 300px;"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.080490692791!2d77.26446857533185!3d28.537300275716934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3273585d443%3A0xc7a7216cc048015!2sIGCSM!5e0!3m2!1sen!2sin!4v1740804463253!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" "
+          frameborder="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+        <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+        <h4>Our Newsletter</h4>
+        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+        <form action="forms/newsletter.php" method="post" class="php-email-form">
+          <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+        </form>
+      </div> -->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SIAC</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
+    </div> -->
+      </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
