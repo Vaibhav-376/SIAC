@@ -4,25 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>SIAC</title>
+  <title>About Us</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
   <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -48,16 +38,9 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <style>
-    .carousel img {
-      height: 500px;
-      /* Adjust the height as needed */
-      object-fit: cover;
-    }
-  </style>
 </head>
 
-<body class="index-page">
+<body class="about-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
@@ -181,13 +164,18 @@
       const navMenu = document.querySelector(".navmenu ul");
       const dropdowns = document.querySelectorAll(".dropdown > .dropdown-toggle");
 
-      mobileToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("show");
-      });
+      if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+      }
 
       dropdowns.forEach((dropdown) => {
         dropdown.addEventListener("click", function (event) {
-          event.preventDefault();
+          // Prevent default only if it's an anchor tag
+          if (this.tagName === "A") {
+            event.preventDefault();
+          }
           const parentLi = this.parentElement;
           parentLi.classList.toggle("active");
 
@@ -199,40 +187,69 @@
         });
       });
 
-      document.getElementById("mobile-menu-toggle").addEventListener("click", function () {
-        const mobileMenu = document.getElementById("mobile-menu");
-        mobileMenu.classList.toggle("hidden");
-      });
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (mobileMenu) {
+            mobileMenu.classList.toggle("hidden");
+          }
+        });
+      }
 
       document.addEventListener("click", function (event) {
-        if (!event.target.closest(".navmenu")) {
-          navMenu.classList.remove("show");
+        if (!event.target.closest(".navmenu") && !event.target.classList.contains("dropdown-toggle")) {
+          if (navMenu) {
+            navMenu.classList.remove("show");
+          }
           document.querySelectorAll(".dropdown").forEach((dropdown) => {
             dropdown.classList.remove("active");
           });
         }
       });
     });
+
   </script>
 
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-    class="bi bi-arrow-up-short"></i></a>
 
-<!-- Preloader -->
-<div id="preloader"></div>
+  <main class="main">
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <section id="hero" class="hero section dark-background position-relative overflow-hidden">
 
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
+      <img src="/assets/images/ourTeam.png" class="position-absolute top-0 start-0 w-100 h-100 img-fluid"
+        alt="Background Image" data-aos="fade-in" style="object-fit: cover;">
+
+      <div class="container position-relative text-center text-white">
+        <h2 data-aos="fade-up" data-aos-delay="100">
+          Our <span class="text-[]">Team</span>
+        </h2>
+      </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h2 class="" style="text-align: center; ">Team <span class="text-[#F07C00]" style="font-weight: bold;">Members</span></h2>
+    </section>
+
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
 
 </body>
 
