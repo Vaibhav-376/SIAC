@@ -10,6 +10,7 @@
 
   <!-- Favicons -->
   <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -53,6 +54,11 @@
       height: 500px;
       /* Adjust the height as needed */
       object-fit: cover;
+    }
+  </style>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-clifford: #da373d;
     }
   </style>
 </head>
@@ -180,10 +186,14 @@
       const mobileToggle = document.querySelector(".mobile-nav-toggle");
       const navMenu = document.querySelector(".navmenu ul");
       const dropdowns = document.querySelectorAll(".dropdown > .dropdown-toggle");
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-      mobileToggle.addEventListener("click", function () {
-        navMenu.classList.toggle("show");
-      });
+      if (mobileToggle) {
+        mobileToggle.addEventListener("click", function () {
+          navMenu.classList.toggle("show");
+        });
+      }
 
       dropdowns.forEach((dropdown) => {
         dropdown.addEventListener("click", function (event) {
@@ -199,10 +209,11 @@
         });
       });
 
-      document.getElementById("mobile-menu-toggle").addEventListener("click", function () {
-        const mobileMenu = document.getElementById("mobile-menu");
-        mobileMenu.classList.toggle("hidden");
-      });
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
 
       document.addEventListener("click", function (event) {
         if (!event.target.closest(".navmenu")) {
@@ -213,26 +224,311 @@
         }
       });
     });
+
   </script>
 
 
+  <main class="main">
+    <section id="hero" class="hero section dark-background position-relative overflow-hidden">
+
+      <img src="/assets/images/placementTieups.avif" class="position-absolute top-0 start-0 w-100 h-100 img-fluid"
+        alt="Background Image" data-aos="fade-in" style="object-fit: cover;">
+
+      <div class="container position-relative text-center text-white">
+        <h2 data-aos="fade-up" data-aos-delay="100">
+        </h2>
+      </div>
+
+    </section>
+    <section class="p-3">
+      <!-- <div class="flex flex-col md:flex-row items-center gap-4"> -->
+      <div class="mx-auto ">
+        <h1 class="text-3xl text-center">Placement <span class="text-[#F07C00] font-bold"> Partners : </span></h1>
+        <div class="mt-10  border-2 border-gray-100 rounded-lg p-10 shadow-lg">
+          <h2 class="">Self <span class="text-[#F07C00] font-bold">Employment</span></h2>
+          <p class="text-md">At SIAC, we are committed to unlocking your potential for thriving in the realm of
+            self-employment through our robust two-step approach. </p>
+          <p><span class="font-bold text-xl">First, master in demand-skills </span>with our expert-curated curriculum
+            and hands-on OJT programs, providing the theoretical knowledge and practical experience needed for success.
+          </p>
+          <p><span class="font-bold text-xl">Second, achieve financial empowerment</span> with access to a range of
+            resources and guidance, enabling you to empower your entrepreneurial dream with confidence.</p>
+          <h2 class="text-[#F07C00] font-bold" style="color: #F07C00; font-weight: bold;">Captives</h2>
+          <p>Our commitment extends even further than placement. We recognize the talent and potential nurtured within
+            our training programs, and many of our graduates choose to build their careers with us. This allows us to
+            provide a seamless transition from training to professional practice, ensuring continuity and leveraging the
+            skills they've honed specifically for our needs. This mutually beneficial approach not only empowers our
+            graduates to excel in their chosen fields but also strengthens our organization with a workforce deeply
+            invested in its success.</p>
+          <h2 class="">Campus Placement & <span class="text-[#F07C00] font-bold"> Job Fairs</span></h2>
+          <p>Our company, IGCSM, plays a pivotal role in facilitating campus placement for registered candidates through
+            job fairs like Rozgar Mela organized by the Department of Employment. Specializing in education, we focus on
+            training students with the necessary skills and guiding them through the placement process. Our active
+            involvement includes registering on the official Rozgar Mela portal, providing comprehensive skill-building
+            programs, and offering personalized guidance to ensure they're well-prepared for the interview process. We
+            prioritize the holistic development of individuals, equipping them to confidently enter the job market. Our
+            commitment goes beyond merely hiring; we strive to place candidates effectively, helping them find suitable
+            roles that match their aspirations. This not only contributes to the success of Rozgar Mela job fairs but
+            also fosters a skilled and qualified workforce, ultimately benefiting both employers and job seekers</p>
+          <h2 class="text-[#F07C00] font-bold" style="font-weight: bold; color: #F07C00;">International</h2>
+          <p>Our commitment to expanding opportunities transcends borders. We actively leverage the Technical Intern
+            Training Program (TITP) and other international initiatives to empower talented individuals worldwide. By
+            strategically utilizing these programs, we've successfully placed candidates in diverse roles and industries
+            across the globe. This approach not only broadens our talent pool and fosters cultural exchange, but also
+            contributes to the development of international workforces. We combine our rigorous training programs with
+            strategic placement efforts, ensuring a seamless transition and maximizing success for both individuals and
+            our company on a global scale.</p>
+          <p><span class="font-bold">*Disclaimer: </span>"The information on this page is for informational purposes
+            only, subject to change without notice. We make no guarantees or warranties regarding its completeness,
+            reliability, or accuracy. Do not substitute this information for professional advice or make decisions
+            solely based on it. The content does not constitute an offer to sell or provide any specific product or
+            service."</p>
+        </div>
+      </div>
+      <!-- <div class="md:w-1/2">
+          <img src="https://placehold.co/900x400" alt="" class="w-full rounded-lg shadow-md">
+        </div> -->
+      <!-- </div> -->
+    </section>
+
+    <section class="p-3 mx-4 shadow-lg mt-3 mb-3 rounded-lg animate-fadeIn">
+      <h2 class="mb-3 text-lg md:text-2xl font-semibold">
+        Job Fair <span class="text-[#F07C00] font-bold">Pictures</span>
+      </h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="group overflow-hidden rounded-lg">
+          <img class="rounded-lg w-full h-auto max-h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
+            src="/assets/JobFair/img291.jpg" alt="Job Fair Image 1">
+        </div>
+        <div class="group overflow-hidden rounded-lg">
+          <img class="rounded-lg w-full h-auto max-h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
+            src="assets/JobFair/img322.jpg" alt="Job Fair Image 2">
+        </div>
+        <div class="group overflow-hidden rounded-lg">
+          <img class="rounded-lg w-full h-auto max-h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
+            src="assets/JobFair/img649.jpg" alt="Job Fair Image 3">
+        </div>
+        <div class="group overflow-hidden rounded-lg">
+          <img class="rounded-lg w-full h-auto max-h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
+            src="/assets/JobFair/img109.jpg" alt="Job Fair Image 4">
+        </div>
+        <div class="group overflow-hidden rounded-lg">
+          <img class="rounded-lg w-full h-auto max-h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
+            src="assets/JobFair/img75.jpg" alt="Job Fair Image 5">
+        </div>
+        <div class="group overflow-hidden rounded-lg">
+          <img class="rounded-lg w-full h-auto max-h-[600px] object-cover transition-transform duration-300 group-hover:scale-105"
+            src="assets/JobFair/img785.jpg" alt="Job Fair Image 6">
+        </div>
+      </div>
+    </section>
+    
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+    </style>
+    
+    <section>
+      <div class="marquee-wrapper">
+        <div class="marquee-content">
+          <img src="/assets/PlacementTieUps/emcom.jpg" alt="">
+          <img src="/assets//PlacementTieUps//amitEnterprise.jpg" alt="">
+          <!-- <img src="/assets//Industrytieups/aerialTieUps.png" alt=""> -->
+          <img src="assets/PlacementTieUps/cwes.jpg" alt="">
+          <img src="/assets/PlacementTieUps/gssSecurity.jpg" alt="">
+          <img src="/assets//PlacementTieUps/indInnovation.jpg" alt="">
+          <img src="/assets//PlacementTieUps/jems.jpg" alt="">
+          <img src="/assets//PlacementTieUps/nike.jpg" alt="">
+          <img src="/assets//PlacementTieUps/omEnterprises.jpg" alt="">
+          <img src="/assets//PlacementTieUps/propshop.jpg" alt="">
+          <img src="/assets//PlacementTieUps/pukhraj.jpg" alt="">
+          <img src="/assets//PlacementTieUps/pukhrajPureHerbal.jpg" alt="">
+          <img src="/assets//PlacementTieUps/raymond.jpg" alt="">
+          <img src="/assets//PlacementTieUps/siyaramEnterprise.jpg" alt="">
+          <img src="/assets//PlacementTieUps/vrpn.jpg" alt="">
+          <img src="/assets//PlacementTieUps/woodland.jpg" alt="">
+          <!-- <img src="/assets//PlacementTieUps/" alt=""> -->
+          <!-- Duplicate images for seamless loop -->
+          <img src="/assets/PlacementTieUps/emcom.jpg" alt="">
+          <img src="/assets//PlacementTieUps//amitEnterprise.jpg" alt="">
+          <!-- <img src="/assets//Industrytieups/aerialTieUps.png" alt=""> -->
+          <img src="assets/PlacementTieUps/cwes.jpg" alt="">
+          <img src="/assets/PlacementTieUps/gssSecurity.jpg" alt="">
+          <img src="/assets//PlacementTieUps/indInnovation.jpg" alt="">
+          <img src="/assets//PlacementTieUps/jems.jpg" alt="">
+          <img src="/assets//PlacementTieUps/nike.jpg" alt="">
+          <img src="/assets//PlacementTieUps/omEnterprises.jpg" alt="">
+          <img src="/assets//PlacementTieUps/propshop.jpg" alt="">
+          <img src="/assets//PlacementTieUps/pukhraj.jpg" alt="">
+          <img src="/assets//PlacementTieUps/pukhrajPureHerbal.jpg" alt="">
+          <img src="/assets//PlacementTieUps/raymond.jpg" alt="">
+          <img src="/assets//PlacementTieUps/siyaramEnterprise.jpg" alt="">
+          <img src="/assets//PlacementTieUps/vrpn.jpg" alt="">
+          <img src="/assets//PlacementTieUps/woodland.jpg" alt="">
+        </div>
+      </div>
+
+      <style>
+        .marquee-wrapper {
+          width: 80%;
+          /* Set marquee width (Adjust as needed) */
+          max-width: 1000px;
+          /* Optional: Limit max width */
+          margin: auto;
+          /* Centers it horizontally */
+          overflow: hidden;
+          position: relative;
+          margin-bottom: 20px;
+          background: white;
+          padding: 10px 0;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .marquee-content {
+          display: flex;
+          gap: 15px;
+          /* Adjust spacing between images */
+          width: max-content;
+          animation: scrollMarquee 80s linear infinite;
+          /* Slower speed */
+        }
+
+        .marquee-content img {
+          max-height: 100px;
+          /* Adjust as per actual size */
+          width: auto;
+          /* Maintains aspect ratio */
+          object-fit: contain;
+          border-radius: 10px;
+        }
+
+        /* Stop scrolling on hover */
+        .marquee-wrapper:hover .marquee-content {
+          animation-play-state: paused;
+        }
+
+        @keyframes scrollMarquee {
+          from {
+            transform: translateX(0);
+          }
+
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      </style>
+    </section>
+  </main>
+
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename" style="color: #F07C00;">SIAC</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <!-- <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p> -->
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9911065358</span></p>
+            <p><strong>Email:</strong> <span>skillscentres@igcsm.in</span></p>
+          </div>
+          <!-- <div class="social-links d-flex mt-4">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div> -->
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4 style="color: #F07C00;">Useful Links</h4>
+          <ul>
+            <li><a href="index.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Home</a></li>
+            <li><a href="about.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">About us</a></li>
+            <li><a href="ourExpertise.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Our Expertise</a></li>
+            <li><a href="contact.html" style="text-decoration: none; color: inherit;"
+                onmouseover="this.style.color='#F07C00'" onmouseout="this.style.color='inherit'">Contact Us</a></li>
+            <li><a href="#" style="text-decoration: none; color: inherit;" onmouseover="this.style.color='#F07C00'"
+                onmouseout="this.style.color='inherit'">Work With Us</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Product Management</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Graphic Design</a></li>
+        </ul>
+      </div> -->
+
+        <div class="mb-5" data-aos="fade-up" style="width: max-content; flex: auto ;" data-aos-delay="200">
+          <iframe style="border:0; width: 100%; height: 300px;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.080490692791!2d77.26446857533185!3d28.537300275716934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3273585d443%3A0xc7a7216cc048015!2sIGCSM!5e0!3m2!1sen!2sin!4v1740804463253!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" "
+            frameborder=" 0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-12 footer-newsletter">
+        <h4>Our Newsletter</h4>
+        <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+        <form action="forms/newsletter.php" method="post" class="php-email-form">
+          <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+        </form>
+      </div> -->
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SIAC</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
+    </div> -->
+      </div>
+
+  </footer>
+
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-    class="bi bi-arrow-up-short"></i></a>
+      class="bi bi-arrow-up-short"></i></a>
 
-<!-- Preloader -->
-<div id="preloader"></div>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Main JS File -->
-<script src="assets/js/main.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
